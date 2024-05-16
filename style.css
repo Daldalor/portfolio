@@ -1,0 +1,383 @@
+:root {
+    /* Color variables */
+    --black-color: #131313;
+    --white-color: #f9f9f9;
+    --purple-color: #D377FF;;
+
+    /* Font variables */
+    --headings-font: "Josefin Sans", "Comfortaa", bold;
+    --text-font: "Montserrat", sans-serif;
+
+    /*Font Weights */
+    --montserrat-light: 300;
+    --montserrat-medium: 500;
+    --montserrat-bold: 700;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body
+{
+    background-color: var(--black-color);
+}
+
+/* Landing Page header*/
+
+.landing-container-1 {
+    width:100%;
+    height:50vh;
+    display: flex;
+    background-color: var(--black-color);
+    justify-content: space-between;
+}
+
+#personal-portfolio-header{
+    font-family: var(--headings-font);
+    color:var(--white-color);
+    font-size:120px;
+    margin-left:13.7vw;
+    margin-top:20vh;
+}
+
+#landing-page-stars{
+    max-width:100vw;
+    height:30vh;
+    margin-top: 13vh;
+    margin-right:8vw;
+}
+    
+/* Landing Page under header*/
+
+.flex-container-2 {
+    width:100%;
+    height:50vh;
+    display: flex;
+    align-items: center;
+}
+
+#landing-line{
+    margin:5vw;
+    margin-bottom:35vh;
+    width:50vw;
+}
+#landing-my-name{
+    margin-left:14vw;
+}
+#landing-my-name, #landing-year{
+    font-family: var(--text-font);
+    font-weight: var(--montserrat-light);
+    font-size: 24px;
+    color: var(--white-color);
+    margin-bottom:25vh;
+}
+.purple-letters{
+    color: var(--purple-color);
+}
+
+#landing-arrow{
+margin-left:-32vw;
+margin-top:15vh;
+transition: transform 0.3s ease-in-out;
+}
+
+#landing-arrow:hover{
+    transform: translateY(10px);
+
+}
+/* About (me) header */
+
+.about-me-header{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    height:30vh;
+}
+
+.section-header{
+    font-family: var(--headings-font);
+    color: var(--white-color);
+    font-size:70px;
+    margin-left:13.7vw;
+
+}
+
+.section-line{
+width:71vw;
+}
+
+/* About (me) page */
+
+.about-me-container{
+    width:100%;
+    height: 70vh;
+    position:relative;
+    display:flex;
+    flex-direction:row;
+}
+
+#about-me-profile-pic{
+    width:50;
+    height:56vh;
+    border-radius: 7px;
+    margin-left:14vw;
+}
+
+.about-me-text-container-main{
+    display:flex;
+    flex-direction:column;
+}
+#about-me-hello{
+    font-family: var(--text-font);
+    font-weight: var(--montserrat-medium);
+    font-size:28px;
+    margin-left:3vw;
+    margin-top:2vh;
+}
+#about-me-colored-hello{
+    color:var(--purple-color);
+    line-height:0;
+}
+
+.about-me-text-container{
+    margin-top:1vh;
+}
+
+.about-me-text{
+    font-weight:var(--montserrat-light);
+    width:50vw;
+    font-family: var(--text-font);
+    font-size:28px;
+    margin-left:3vw;
+    color:var(--white-color);
+    line-height:3.5vh;
+}
+#unique-medium{
+    font-weight:var(--montserrat-medium);
+}
+
+.about-me-work-text{
+    font-weight:var(--montserrat-medium);
+    font-family: var(--text-font);
+    font-size:28px;
+    margin-left:3vw;
+    color:var(--purple-color);
+}
+.about-me-skills-container{
+    display:flex;
+    margin-left:3vw;
+}
+.about-me-type-skill{
+    color:var(--white-color);
+    font-family: var(--text-font);
+    font-weight:var(--montserrat-light);
+    font-size:24px;
+}
+.about-me-skills-content{
+    width: calc(18% - 1vw);
+}
+#about-me-css-text{
+    margin-left:0.7vw;
+}
+#about-me-git-text{
+    margin-left:1vw;
+}
+#about-me-premiere-text{
+    margin-left:-1.6vw;
+}
+#about-me-and-more-text{
+    margin-top:7vw;
+}
+
+/* Selected Work header */
+
+.selectedwork-header{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    height:20vh;
+}
+
+#selectedwork-line{
+width:71vw;
+}
+
+/* Selected Work page */
+
+.selectedwork-project1-container{
+    font-size:50px;
+    margin-left:13.6vw;
+    width:65vw;
+}
+
+#selectedwork-supertext{
+    font-size: 40px;
+    font-weight: var(--montserrat-medium);
+    }
+
+#selectedwork-pavemind{
+    color:var(--purple-color);
+    font-weight:var(--montserrat-bold);
+}
+
+/* first container */
+
+#selectedwork-project1-text{
+    font-weight:var(--montserrat-light);
+    font-family: var(--text-font);
+    color:var(--white-color);
+    width: 50vw;
+    font-size: 38px;
+}
+
+.selectedwork-project-description{
+    font-weight:var(--montserrat-light);
+    font-family: var(--text-font);
+    font-style: italic;
+    color:var(--white-color);
+    font-size:20px;
+    padding-bottom:2.5vh;
+    width: 50vw;
+}
+.selectedwork-line-projects{
+    width:71vw;
+    float:left;
+}
+.selectedwork-project-button{
+float:right;
+display:flex;
+margin-top:-4.5vh;
+}
+
+.transparent-button{
+    font-family:var(--text-font);
+    background-color: transparent;
+    border: 2px solid var(--white-color);
+    border-radius: 30px;
+    padding: 10px 40px;
+    color: var(--white-color);
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* second container */
+.selectedwork-project2-container{
+font-size:38px;
+margin-left:13.6vw;
+width:65vw;
+}
+
+#selectedwork-project2-text{
+    font-weight:var(--montserrat-light);
+    font-family: var(--text-font);
+    color:var(--white-color);
+    width: 65vw;
+}
+
+#selectedwork-toyhero{
+    color:var(--purple-color);
+    font-weight:var(--montserrat-bold);
+}
+
+/* third container */
+.selectedwork-project3-container{
+font-weight:var(--montserrat-light);
+font-size:38px;
+margin-left:13.6vw;
+width:65vw;
+font-family: var(--text-font);
+}
+
+#selectedwork-project3-text{
+    color:var(--white-color);
+}
+
+#selectedwork-aidace{
+    color:var(--purple-color);
+    font-weight:var(--montserrat-bold);
+}
+
+/* Contact page */
+
+.contact-header{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    height:20vh;
+    margin-top:20vh;
+}
+
+#selectedwork-header{
+    font-family: var(--headings-font);
+    color: var(--white-color);
+    margin-left:13.7vw;
+}
+
+#get-in-touch{
+    font-size:28px;
+    color:var(--purple-color);
+    font-family: var(--text-font);
+    font-weight:var(--montserrat-medium);
+}
+
+.contact-container{
+margin-left:13.7vw;
+}
+
+#contact-section-line{
+    margin: 0;
+    width:43vw;
+    margin-left:13.7vw;
+}
+
+#contact-email{
+    font-family: var(--text-font);
+    font-weight:var(--montserrat-light);
+    color:var(--white-color);
+    font-size:28px;
+    margin-bottom:5vh;
+}
+.contact-hyperlinks{
+    font-family: var(--text-font);
+    font-weight: var(--montserrat-light);
+    font-size:28px;
+    margin-top:4vh;
+    margin-left:13.7vw;
+    color:var(--white-color);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 0.5px solid;
+}
+
+#copyright{
+    color:var(--white-color);
+    font-family: var(--text-font);
+    font-weight: var(--montserrat-light);
+    margin-left:13.7vw;
+    margin-top:12vh;
+}
+
+/* Scroll to top button */
+
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+#scrollToTopBtn img {
+    width: 8vw;
+    height: 6vh;
+}
+
+#scrollToTopBtn:hover {
+    transform: translateY(-10px);
+}
