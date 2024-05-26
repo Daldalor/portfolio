@@ -17,8 +17,8 @@
 /* Integrating the new font that matches the "vibe" of the website */
 @font-face {
     font-family: 'Eurostyle'; 
-    src: url('fonts/EuroStyle.TTF') format('ttf'),
-         url('fonts/EuroStyle\ Normal.ttf') format('ttf');
+    src: url('fonts/EuroStyle.woff2') format('woff2'),
+         url('fonts/EuroStyle\ Normal.woff2') format('woff2');
   }
 
 html {
