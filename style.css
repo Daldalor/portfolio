@@ -15,6 +15,7 @@
 }
 
 /* Integrating the new font that matches the "vibe" of the website */
+
 @font-face {
     font-family: 'Eurostyle'; 
     src: url('fonts/EuroStyle.woff2') format('woff2'),
@@ -65,7 +66,6 @@ h1 {
 /* Landing Page header*/
 
 .landing-container-1 {
-    width:100%;
     height:50vh;
     display: flex;
     background-color: var(--black-color);
@@ -112,11 +112,54 @@ h1 {
     }
 }
 
+/* Animated text code with sliding up */
 
+.animated-text {
+    font-size: 2em;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    transform: translateY(20px);
+}
+
+.animated-text.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animated-text.fadeIn {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.animated-text.slideIn {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 /* Landing Page under header*/
 
 .flex-container-2 {
-    width:100%;
     height:50vh;
     display: flex;
     align-items: center;
@@ -142,21 +185,23 @@ h1 {
 }
 
 #landing-arrow{
-margin-left:-32vw;
-margin-top:15vh;
-transition: transform 0.3s ease-in-out;
+    margin-top:15vh;
+    margin-left:-38vw;
+    transition: transform 0.3s ease-in-out;
 }
 
 #landing-arrow:hover{
     transform: translateY(10px);
 
 }
+
 /* About (me) header */
 
 .about-me-header{
     display:flex;
     flex-direction: column;
     width:100%;
+    margin-top:15vh;
 }
 
 .section-header{
@@ -288,7 +333,7 @@ margin-left:5vw;
     flex-direction: column;
     width:100%;
     height:15vh;
-    margin-top:10vh;
+    margin-top:2.5vh;
 }
 
 #selectedwork-line{
@@ -312,7 +357,12 @@ width:71vw;
     color:var(--purple-color);
     font-weight:var(--montserrat-bold);
 }
-
+#pulsarmap{
+    width:10vw;
+    position:absolute;
+    margin-left:25vw;
+    margin-top:-2vh;
+}
 /* first container */
 
 #selectedwork-project1-text{
@@ -354,6 +404,7 @@ margin-top:-4.5vh;
 }
 
 /* second container */
+
 .selectedwork-project2-container{
 font-size:38px;
 margin-left:13.6vw;
@@ -373,6 +424,7 @@ width:65vw;
 }
 
 /* third container */
+
 .selectedwork-project3-container{
 font-weight:var(--montserrat-light);
 font-size:38px;
@@ -410,9 +462,9 @@ font-family: var(--text-font);
 
 .contact-me-container{
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 40vh;
+    height: 45vh;
+    justify-content: center;
 }
 .orbit-container {
     position: relative;
@@ -470,7 +522,9 @@ font-family: var(--text-font);
 a.icon:hover {
     animation: wobble 0.5s ease-in-out;
 }
-/* Keyframes for the wobble animation */
+
+/* Keyframes for the wobble animation on orbit icons*/
+
 @keyframes wobble {
     0%, 100% {
         transform: rotate(0deg);
@@ -515,4 +569,174 @@ a.icon:hover {
 
 #scrollToTopBtn:hover {
     transform: translateY(-10px);
+}
+
+
+/* PROJECT PAVEMIND PAGE STARTS HERE */
+
+.pavemind-button-name-container{
+    display:flex;
+    font-family: var(--headings-font);
+    color:var(--white-color);
+    font-size:70px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 3vh;
+    padding-bottom:7vh;
+}
+
+.pavemind-heading{
+    height:1vh;
+}
+
+#pavemind-underline-heading{
+    width:40vw;
+}
+
+#pavemind-name-purple{
+    color:var(--purple-color);
+}
+
+#pavemind-top-left-border{
+    position: absolute;
+    z-index:-999;
+    padding:20px;
+}
+.pavemind-back-button-container{
+    position:absolute;
+    padding-top:8vh;
+    padding-left:1.2vw;
+}
+
+#pavemind-go-back-text{
+    color:var(--white-color);
+    font-family: var(--text-font);
+}
+
+#pavemind-back-button-link{
+    height:6.5vh;
+    width:9vw;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* Project PaveMind Summary Section */
+.pavemind-summary-container{
+    width:100%;
+    height:50vh;
+    display:flex;
+}
+
+.pavemind-summary-text{
+    width:50%;
+    height:50vh;
+}
+
+.pavemind-summary-photo{
+    width:50%;
+    height:50vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.pavemind-text-header{
+    color:var(--purple-color);
+    font-size: 50px;
+    font-family: var(--headings-font);
+    margin-left:5vw;
+}
+
+.pavemind-text-and-photo{
+    display:flex;
+    margin-left:5vw;
+    align-items: center;
+}
+
+#pavemind-afterfullmoon-text{
+    color:var(--white-color);
+    font-family: var(--text-font);
+    margin-left:1vw;
+    font-size:21px;
+}
+#pavemind-summary-text2{
+    color:var(--white-color);
+    font-family: var(--text-font);
+    font-size:21px;
+    margin-left:5vw;
+}
+
+#pavemind-landing-picture{
+    max-width: 100%;
+    height: 30vh;
+    border-radius:10px;
+    border:var(--purple-color) solid 2px;
+}
+
+#pavemind-link{
+    font-family: var(--text-font);
+    color:var(--white-color);
+    text-decoration: none;
+}
+
+
+a {
+    color: var(--white-color); /* Links color */
+}
+
+/* Visited link */
+a:visited {
+    color: var(--white-color); /* Color of the link after it has been visited */
+}
+
+/* Hover link */
+a:hover {
+    color: var(--purple-color); /* Color when the mouse is over the link */
+}
+
+/* Active link */
+a:active {
+    color: rgb(218, 105, 0); /* Color when the link is being clicked */
+}
+
+
+/* Project PaveMind Challenges & Technologies Used Section*/
+
+.pavemind-explanation-section{
+    display:flex;
+    flex-direction:row;
+    width:100%;
+    height:43vh;
+}
+
+/* Challenges & Technologies Used elements */
+
+.pavemind-final-containers{
+    width:33%;
+    color:var(--white-color);
+    font-family: var(--text-font);
+    font-size:21px;
+}
+
+.pavemind-final-content{
+    display:flex;
+    align-items: center;
+    margin-left:5vw;
+}
+.pavemind-final-text{
+    margin-left:1vw;
+}
+
+/* Bottom right border */
+
+#pavemind-bottom-right-border{
+    padding: 0px 20px 20px 0px;
+    position: absolute;
+    right:0;
+    margin-top:20vh;
 }

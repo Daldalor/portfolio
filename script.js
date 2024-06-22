@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   
-  // Intersection Observer to trigger shooting stars animation when container is 40-50% visible
+  // intersection observer to trigger shooting stars animation when container is 40-50% visible
   const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
           if (entry.isIntersecting && entry.intersectionRatio >= 0.8 && entry.intersectionRatio <= 0.9) {
@@ -127,4 +127,56 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // observing the stars container
   observer.observe(shootingStarsContainer);
+});
+
+/* Animations on scroll */
+
+document.addEventListener("DOMContentLoaded", () => {
+    const animatedElements = document.querySelectorAll('.animated-text');
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1 // triggering when 10% of the element is visible
+    };
+
+    const observerCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // stop observing once the animation has been triggered
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    animatedElements.forEach(element => {
+        observer.observe(element);
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const animatedElements = document.querySelectorAll('.animated-text-left');
+
+    const observerOptions = {
+        root: null, // Observing in the viewport
+        rootMargin: '0px',
+        threshold: 0.1 // Trigger when 10% of the element is visible
+    };
+
+    const observerCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Stop observing once the animation has been triggered
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    animatedElements.forEach(element => {
+        observer.observe(element);
+    });
 });

@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- linking the header font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-    <!-- linking the text font -->
+    <!-- Linking the text font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -15,31 +11,63 @@
     <title>Toni Dimitrov Portfolio</title>
 </head>
 <body>
+    <!-- Scroll to to button -->
     <div id="scrollToTopBtn">
         <img src="assets/scroll-arrow.svg" alt="scroll to top button">
     </div>
 <!-- Landing Page header -->
-    <div class="landing-container-1">
+    <div class="landing-container-1 animated-text">
     <h1 id="personal-portfolio-header">PERSONAL <br> PORTFOLIO</h1>
     <img class="no-cursor-effect" id="landing-page-stars" src="./assets/landing-page-stars.png" alt="image of stars">
     </div>
 
-<!-- Landing Page itself -->
-    <div class="flex-container-2">
+<!-- Landing Page bottom part -->
+    <div class="flex-container-2 animated-text">
         <span id="landing-my-name"> <span class="purple-letters"> Toni </span> Dimitrov</span> <hr id="landing-line"> <span id="landing-year">20<span class="purple-letters">24</span></span>
-        <a href="#about-me-header-id"><img id="landing-arrow" src="./assets/landing-arrow.png" alt="arrow for navigation"></a>
+        <a href="#selectedwork-supertext"><img id="landing-arrow" src="./assets/wormhole.png" alt="wormhole for navigation"></a>
     </div>
 
-    <!-- About me page header -->
-    <div class="about-me-header" id="about-me-header-id">
+    
+<!-- Selected work page header -->
+
+<div class="selectedwork-header animated-text">
+    <h1 class="section-header">SELECTED WORK <sup id="selectedwork-supertext">(3)</sup> <img class="no-cursor-effect" id="pulsarmap" src="assets/pulsarmap-landing.png"></h1>
+    <hr id="selectedwork-line"></hr>
+    </div>
+    <!-- Selected work page itself -->
+    <!-- first container -->
+    <div class="selectedwork-project1-container animated-text">
+    <p id="selectedwork-project1-text">Website for burnout prevention - <span id="selectedwork-pavemind">PaveMind</span></p>
+    <a href="project-pavemind.html"><div class="selectedwork-project-button"><button class="transparent-button"> inspect </button></div></a>
+    <p class="selectedwork-project-description"> Web Design, Front-End Development</p>
+    <hr class="selectedwork-line-projects"></hr>
+    </div>
+<!-- second container -->
+<div class="selectedwork-project2-container animated-text">
+    <p id="selectedwork-project2-text">Mobile app about donating toys for those in need - <span id="selectedwork-toyhero">ToyHero </span></p>
+    <a href="project-secondproject.html"><div class="selectedwork-project-button"><button class="transparent-button"> inspect </button></div></a>
+    <p class="selectedwork-project-description"> App Design, Swift Development </p>
+    <hr class="selectedwork-line-projects"></hr>
+</div>
+<br>
+    <!-- third container -->
+<div class="selectedwork-project3-container animated-text">
+        <p id="selectedwork-project3-text">Mobile app for tracking calories & health  - <span id="selectedwork-aidace">AidAce</span></p>
+        <a href="project-thirdproject.html"><div class="selectedwork-project-button"><button class="transparent-button"> inspect </button></div></a>
+        <p class="selectedwork-project-description"> App Design, Kotlin Development </p>
+        <hr class="selectedwork-line-projects"></hr>
+</div>
+
+<!-- About me page header -->
+<div class="about-me-header animated-text" id="about-me-header-id">
     <h1 class="section-header">ABOUT (ME)</h1>
     <svg id="line1" viewBox="5 0 70 5" preserveAspectRatio="none">
-        <polyline points="0,4 12,4 13,2 69,2 70,4 77,4" fill="none"/>
+        <polyline points="0,4 12,4 13,2 69,2 70,4 77,4" fill="none"/>  <!-- futuristic bended lines with polyline points  -->
     </svg>
     </div>
 
     <!-- About me page itself -->
-<div class="about-me-container" id="about-me-container">
+<div class="about-me-container animated-text" id="about-me-container">
     <img class="no-cursor-effect" id="about-me-left-target" src="assets/left-target.png" alt="left-target-png">
         <img id="about-me-profile-pic" src="assets/profile-pic.jpg" alt="my picture" class="no-cursor-effect">
         <div class="about-me-text-container-main">
@@ -78,48 +106,18 @@
         </div>
         <img class="no-cursor-effect" id="about-me-right-target" src="assets/right-target.png" alt="right-target-png">
 </div>
-<svg id="line2" viewBox="5 0 91.5 5" preserveAspectRatio="none">
-    <polyline points="0,1 13,1 15,4 88,4 90,1 100,1" fill="none"/>
+<svg class="animated-text" id="line2" viewBox="5 0 91.5 5" preserveAspectRatio="none">
+    <polyline points="0,1 13,1 15,4 88,4 90,1 100,1" fill="none"/> <!-- futuristic bended lines with polyline points  -->
 </svg>
-<!-- Selected work page header -->
-
-<div class="selectedwork-header">
-    <h1 class="section-header">SELECTED WORK <sup id="selectedwork-supertext">(3)</sup></h1>
-    <hr id="selectedwork-line"></hr>
-    </div>
-    <!-- Selected work page itself -->
-    <!-- first container -->
-    <div class="selectedwork-project1-container">
-    <p id="selectedwork-project1-text"> <span id="selectedwork-pavemind"> PaveMind</span> - a burnout-prevention tool</p>
-    <div class="selectedwork-project-button"><button class="transparent-button"> inspect </button></div>
-    <p class="selectedwork-project-description"> Web Design, Front-End Development</p>
-    <hr class="selectedwork-line-projects"></hr>
-    </div>
-<!-- second container -->
-<div class="selectedwork-project2-container">
-    <p id="selectedwork-project2-text"><span id="selectedwork-toyhero"> ToyHero </span> - an app for toy donation</p>
-    <div class="selectedwork-project-button"><button class="transparent-button"> inspect </button></div>
-    <p class="selectedwork-project-description"> App Design, Swift Development </p>
-    <hr class="selectedwork-line-projects"></hr>
-</div>
-<br>
-    <!-- third container -->
-<div class="selectedwork-project3-container">
-        <p id="selectedwork-project3-text"><span id="selectedwork-aidace"> AidAce </span> - an app for sports</p>
-        <div class="selectedwork-project-button"><button class="transparent-button"> inspect </button></div>
-        <p class="selectedwork-project-description"> App Design, Kotlin Development </p>
-        <hr class="selectedwork-line-projects"></hr>
-</div>
-
 
 <!-- Contact page header -->
-<div class="contact-header">
+<div class="contact-header animated-text">
     <h1 class="section-header">CONTACT (ME)</h1>
     <hr id="contact-section-line"></hr>
     </div>
 
     <!-- Contact page content -->
-    <div class="contact-me-container">
+    <div class="contact-me-container animated-text">
     <div class="orbit-container">
         <img class="no-cursor-effect" id="orbit-ring" src="assets/ring.png">
         <div class="orbit" class="no-cursor-effect">
