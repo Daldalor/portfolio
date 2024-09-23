@@ -181,3 +181,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+const userAgent = navigator.userAgent.toLowerCase();
+if (userAgent.includes('crios')) {
+    // Apply Chrome-specific fix
+} else if (userAgent.includes('brave')) {
+    // Apply Brave-specific fix
+}
