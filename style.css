@@ -743,8 +743,10 @@ a:active {
 /* main */
 
 body{
-    width:100%;
+    max-width: 98%;
+    overflow-x: hidden;
 }
+
 
 .section-header{
     font-size:8vw;
@@ -951,5 +953,75 @@ height:40px;
 
 #copyright{
     margin-top:10vh;
+}
+
+
+/* PAVEMIND PROJECT PAGE */
+#pavemind-top-left-border{
+    width:20%;
+}
+
+#pavemind-back-button-link{
+    margin-left:13vw;
+    width:42%;
+}
+
+.pavemind-back-button-container {
+    padding-top: 5vh;
+}
+
+.pavemind-button-name-container{
+    font-size:8vw;
+}
+
+.pavemind-heading{
+    margin-top:15vh;
+}
+
+.pavemind-text-header{
+font-size:8vw;
+}
+
+.pavemind-summary-container{
+flex-direction:column;
+height: 100%;
+}
+
+.pavemind-summary-text{
+width:90%;
+height: 100%;
+}
+
+.pavemind-summary-photo{
+width:100%;
+}
+
+#pavemind-afterfullmoon-text{
+    font-size:18px;
+}
+#pavemind-summary-text2{
+    font-size:18px;
+}
+
+#pavemind-summary-text1{
+    font-size:18px;
+}
+
+.pavemind-explanation-section{
+flex-direction:column;
+}
+.pavemind-final-containers{
+    width:100%;
+    font-size:18px;
+}
+.pavemind-final-text {
+margin-left:5vw;
+}
+#pavemind-comet{
+    width:100%;
+}
+
+#pavemind-bottom-right-border{
+    width:20%;
 }
 }
