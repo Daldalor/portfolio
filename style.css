@@ -742,7 +742,11 @@ a:active {
 
 /* main */
 
+html{
+    viewport-fit: cover;
+}
 body{
+    min-height:100vh;
     max-width: 98%;
     overflow-x: hidden;
 }
