@@ -20,65 +20,56 @@ function scrollToTop() {
 /* Custom Cursor JS */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Check if the device supports touch (mobile or tablet)
-    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-  
-    // If it's a touch device, do nothing (remove or hide the custom cursor)
-    if (isTouchDevice) {
-      // Optional: Remove the custom cursor completely or hide it
-      return;
-    }
-  
-    // The rest of the code for custom cursor behavior for non-touch devices
-    const cursor = document.createElement('div');
-    cursor.id = 'custom-cursor';
-    document.body.appendChild(cursor);
-  
-    let moveTimeout;
-  
-    document.addEventListener('mousemove', (e) => {
+  const cursor = document.createElement('div');
+  cursor.id = 'custom-cursor';
+  document.body.appendChild(cursor);
+
+  let moveTimeout;
+
+  document.addEventListener('mousemove', (e) => {
       cursor.style.left = `${e.clientX}px`;
       cursor.style.top = `${e.clientY}px`;
-  
+
+      // cursor.style.transform = 'scale(1)'; Enlarge cursor on movement setting, not gonna use it, as it complicates things & is not recommended
+
       clearTimeout(moveTimeout);
       moveTimeout = setTimeout(() => {
-        // Placeholder for future transform changes
+      //    cursor.style.transform = 'scale(1)'; // Shrink back to default size setting (related to the above-stated comment)
       }, 200);
-  
+
       cursor.classList.remove('hidden');
-    });
-  
-    document.addEventListener('mouseleave', () => {
+  });
+
+  document.addEventListener('mouseleave', () => {
       cursor.classList.add('hidden');
-    });
-  
-    document.addEventListener('mousedown', () => {
+  });
+
+  document.addEventListener('mousedown', () => {
       cursor.style.transform = 'scale(0.8)'; // Slightly shrink on click
-    });
-  
-    document.addEventListener('mouseup', () => {
+  });
+
+  document.addEventListener('mouseup', () => {
       cursor.style.transform = 'scale(1)'; // Return to normal size on release
       clearTimeout(moveTimeout);
       moveTimeout = setTimeout(() => {
-        cursor.style.transform = 'scale(1)';
-      }, 200);
-    });
-  
-    document.querySelectorAll('button, a, img').forEach(element => {
-      element.addEventListener('mouseover', (e) => {
-        if (!e.target.classList.contains('no-cursor-effect')) {
-          cursor.style.transform = 'scale(1.5)'; // Slightly enlarge when hovering over elements
-        }
-      });
-  
-      element.addEventListener('mouseout', (e) => {
-        if (!e.target.classList.contains('no-cursor-effect')) {
           cursor.style.transform = 'scale(1)';
-        }
-      });
-    });
+      }, 200);
   });
-  
+
+  document.querySelectorAll('button, a, img').forEach(element => {
+    element.addEventListener('mouseover', (e) => {
+        if (!e.target.classList.contains('no-cursor-effect')) {
+            cursor.style.transform = 'scale(1.5)'; // Slightly enlarge when hovering over elements
+        }
+    });
+    element.addEventListener('mouseout', (e) => {
+        if (!e.target.classList.contains('no-cursor-effect')) {
+            cursor.style.transform = 'scale(1)';
+        }
+    });
+});
+});
+
 
 
 

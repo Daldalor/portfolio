@@ -742,6 +742,12 @@ a:active {
 
 /* main */
 
+#custom-cursor {
+    display:none;
+}
+#custom-cursor.hidden {
+    display: none;  /* Hide cursor when .hidden class is added */
+  }
 
 body{
     max-width: 98%;
