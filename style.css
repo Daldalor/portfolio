@@ -621,23 +621,25 @@ a.icon:hover {
 
 /* Project PaveMind Summary Section */
 .pavemind-summary-container{
-    width:100%;
-    height:50vh;
     display:flex;
+    gap:4rem;
+    margin-inline:6rem;
 }
 
-.pavemind-summary-text{
-    width:50%;
-    height:50vh;
-}
 
 .pavemind-summary-photo{
-    width:50%;
-    height:50vh;
-    display:flex;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    position: relative;
+    object-fit: contain;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+#pavemind-text-header-1{
+margin-left:0;
 }
 
 .pavemind-text-header{
@@ -649,7 +651,6 @@ a.icon:hover {
 
 .pavemind-text-and-photo{
     display:flex;
-    margin-left:5vw;
     align-items: center;
 }
 
@@ -663,12 +664,12 @@ a.icon:hover {
     color:var(--white-color);
     font-family: var(--text-font);
     font-size:21px;
-    margin-left:5vw;
 }
 
 #pavemind-landing-picture{
     max-width: 100%;
-    height: 30vh;
+    height: fit-content;
+    object-fit:contain;
     border-radius:10px;
     border:var(--purple-color) solid 2px;
 }
@@ -964,6 +965,18 @@ height:40px;
 
 
 /* PAVEMIND PROJECT PAGE */
+
+
+#pavemind-summary-fullmoon{
+width: 100%;
+height: 4rem;
+object-fit: contain;
+}
+
+.pavemind-text-and-photo{
+    display:grid;
+}
+
 #pavemind-top-left-border{
     width:20%;
 }
@@ -991,7 +1004,7 @@ font-size:8vw;
 
 .pavemind-summary-container{
 flex-direction:column;
-height: 100%;
+margin-inline:3rem;
 }
 
 .pavemind-summary-text{
